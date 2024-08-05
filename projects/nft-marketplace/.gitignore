@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# backup copies, and just files to ignore
+src/components/marketPlace/allinOne_NftSection.jsx
+src/layout/Navbar_AddModal_AIO.jsx
+src/layout/Navbar_backup.jsx

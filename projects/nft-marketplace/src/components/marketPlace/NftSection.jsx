@@ -6,24 +6,23 @@ import { useEffect, useState } from 'react';
 // endpoint: http://localhost:4000/nfts
 import {NftCard} from './NftCard';
 
-
 export function NftSection() {
   // set state of Nft cards
   const [nfts, setNfts] = useState([]);
   // used to determine Loading states
   const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const fetchNFTs = async () => {
-      try {
-        const response = await axios.get('http://localhost:4000/nfts');
-        setNfts(response.data);
-      } catch(error){
-        console.error("Error fetching NFT data:", error);
-      } finally {
-        setLoading(false);
-      }
+  const fetchNFTs = async () => {
+    try {
+      const response = await axios.get('http://localhost:4000/nfts');
+      setNfts(response.data);
+    } catch(error){
+      console.error("Error fetching NFT data:", error);
+    } finally {
+      setLoading(false);
     }
+  }
 
+  useEffect(() => {
     fetchNFTs();
   }, []);
 

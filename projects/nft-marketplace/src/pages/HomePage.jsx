@@ -6,6 +6,7 @@ import { LayoutContainer } from '../layout/LayoutContainer';
 
 export function HomePage() {
   return (
+    // add, delete, edit modal is within Navbar.jsx
     <LayoutContainer>
       <MarketPlaceHeader />
       <MarketPlaceSubmenu />
